@@ -9,7 +9,7 @@
 define('root', $_SERVER['DOCUMENT_ROOT'] . '/');
 define('blogcategory', ' ');
 ?>
-<title>Website Title</title>
+<title>Faculty &amp; Staff Directory</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
@@ -56,32 +56,104 @@ define('blogcategory', ' ');
         <?php include_once ("left-nav.php"); ?>
       </div>
 
-      <div class="col-md-6 section-content">
+      <div class="col-md-9 section-content">
 
         <span id="content-area" class="sr-only sr-only-focusable"></span>
 
-        <h1>Website Title</h1>
+        <h1>Faculty &amp; Staff Directory</h1>
 
         <div class="row">
 
           <div class="col-sm-12 col-md-12 col-lg-12">
-            <p>Aliquam ut aliquet ante. Donec in tellus eget nulla malesuada congue. Mauris quam dui, bibendum vel libero tempor, facilisis faucibus mi. In et ante ac dolor mollis viverra at sodales nisi. Aenean interdum eget est finibus cursus. Aenean pretium ipsum interdum, posuere lacus a, condimentum sapien. Suspendisse sit amet nisl tristique arcu iaculis rutrum ac eget diam. Vivamus tortor elit, tincidunt et cursus a, lobortis vitae risus. Aenean ut enim sem.</p>
+            <h2>Search Page</h2>
+
+            <p>Please enter the first or last name (or portion thereof), title or discipline, or classification to search for faculty, staff or administrators here at Las Positas College.</p>
+
+            <h3>Search by First Name</h3>
+
+            <form action="" class="form-inline">
+              <div class="form-group">
+                <div class="col-md-8">
+                  <label for="frm_firstName" class="sr-only">First Name</label>
+                  <input type="text" name="frm_firstName" id="frm_firstName" class="form-control" placeholder="First Name" value="">
+                </div>
+                <div class="col-md-4">
+                  <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+              </div>
+            </form>
+
+            <h3>Search by Last Name</h3>
+
+            <form action="" class="form-inline">
+              <div class="form-group">
+                <div class="col-md-8">
+                  <label for="frm_lastName" class="sr-only">Last Name</label>
+                  <input class="form-control" type="text" id="frm_lastName" name="frm_lastName" placeholder="Last Name" value=""/>
+                </div>
+                <div class="col-md-4">
+                  <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+              </div>
+            </form>
+
+            <h3>Search by Title or Discipline</h3>
+
+            <form action="" class="form-inline">
+              <div class="form-group">
+                <div class="col-md-5">
+                  <label for="title" class="sr-only">Title or Discipline</label>
+                  <input class="form-control" type="text" id="title" name="title" placeholder="Title or Discipline" value=""/>
+                </div>
+                <div class="col-md-7">
+                  <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+
+
+                <div class="col-md-12">
+                  <p class="form-text text-muted">(e.g. Psychology, Counseling, Visual Communication)</p>
+                </div>
+              </div>
+            </form>
+
+            <h3>Search by Classification</h3>
+
+
+
+            <form action="" class="form-inline">
+              <div class="form-group">
+                <div class="col-md-5">
+                  <select class="form-control" name="classification" id="classification">
+                  <option selected="selected">Classification</option>
+                  <option value="Full time Faculty">Full time Faculty</option>
+                  <option value="Adjunct Faculty">Adjunct Faculty</option>
+                  <option value="Administrator">Administrator</option>
+                  <option value="Classified">Classified</option>
+                  <option value="Classified Hourly">Classified Hourly</option>
+                  <option value="Contract">Contract</option>
+                  </select>
+                </div>
+                <div class="col-md-7">
+                  <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+                <div class="col-md-12">
+                  <p class="form-text text-muted">(e.g. Administrator, Full time Faculty Classified)</p>
+                </div>
+              </div>
+            </form>
+
+
 
             <ul class="ul-lpc">
-              <li><a href="#">List Item One</a></li>
-              <li><a href="#">List Item Two</a></li>
-              <li><a href="#">List Item Three</a></li>
+              <li><a href="fulldirectory.php">Complete list of all Faculty, Staff and Administrators</a></li>
+              <li><a href="http://www.care-news.org/directory/directory.htm">CARE Retiree Directory</a></li>
             </ul>
 
           </div>
         </div>
       </div>
 
-      <div class="col-md-3 section-rightbar">
 
-      <?php include_once ("right-sidebar.php"); ?>
-
-      </div>
 
     </div>
 

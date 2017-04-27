@@ -1,16 +1,8 @@
-<nav role="navigation" area-label="Section Navigation" class="left-navigation-wrapper">          
+<nav role="navigation" area-label="Section Navigation" class="left-navigation-wrapper">
   <ul class="list-group list-group-menu left-navigation">
-    <li class="list-group-item navigation-item"><a href="index.php">Website Title</a></li>
-    <li class="list-group-item navigation-item"><a href="#">Item Two</a></li>
-    <li class="list-group-item navigation-item"><a href="#">Item Three</a></li>
-    <li class="list-group-item dropdown-item">
-      <a class="submenu-heading" data-toggle="collapse" data-target="#dropdown-item" href="#item">Dropdown Item</a>
-      <ul id="dropdown-item" class="list-group list-group-menu list-group-submenu collapse">
-        <li class="list-group-item navigation-item"><a href="#">Services Provided</a></li>
-        <li class="list-group-item navigation-item"><a href="#">Forms</a></li>
-        <li class="list-group-item navigation-item"><a href="#">TB Testing</a></li>
-      </ul>
-      </li>
-    <li class="list-group-item navigation-item"><a href="#">Item Four</a></li>
+    <li class="list-group-item navigation-item"><a href="index.php">Faculty &amp; Staff Directory</a></li>
+    <li class="list-group-item navigation-item"><a href="/quicklinks/alphaindex.php">A - Z Index</a></li>
+    <li class="list-group-item navigation-item"><a href="/class-schedule/index.php">Class Schedule</a></li>
+    <li class="list-group-item navigation-item"><a href="/programs/degrees.php">Degrees &amp; Certificates</a></li>
   </ul>
 </nav>
