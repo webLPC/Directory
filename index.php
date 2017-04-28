@@ -71,11 +71,11 @@ define('blogcategory', ' ');
 
             <h3>Search by First Name</h3>
 
-            <form action="" class="form-inline">
+            <form action="results.php" class="form-inline" method="post">
               <div class="form-group">
                 <div class="col-md-8">
-                  <label for="frm_firstName" class="sr-only">First Name</label>
-                  <input type="text" name="frm_firstName" id="frm_firstName" class="form-control" placeholder="First Name" value="">
+                  <label for="firstName" class="sr-only">First Name</label>
+                  <input type="text" name="firstName" id="firstName" class="form-control" placeholder="First Name" value="">
                 </div>
                 <div class="col-md-4">
                   <button type="submit" class="btn btn-primary">Search</button>
@@ -85,11 +85,11 @@ define('blogcategory', ' ');
 
             <h3>Search by Last Name</h3>
 
-            <form action="" class="form-inline">
+            <form action="results.php" class="form-inline" method="post">
               <div class="form-group">
                 <div class="col-md-8">
-                  <label for="frm_lastName" class="sr-only">Last Name</label>
-                  <input class="form-control" type="text" id="frm_lastName" name="frm_lastName" placeholder="Last Name" value=""/>
+                  <label for="lastName" class="sr-only">Last Name</label>
+                  <input class="form-control" type="text" id="lastName" name="lastName" placeholder="Last Name" value=""/>
                 </div>
                 <div class="col-md-4">
                   <button type="submit" class="btn btn-primary">Search</button>
@@ -99,7 +99,7 @@ define('blogcategory', ' ');
 
             <h3>Search by Title or Discipline</h3>
 
-            <form action="" class="form-inline">
+            <form action="results.php" class="form-inline" method="post">
               <div class="form-group">
                 <div class="col-md-5">
                   <label for="title" class="sr-only">Title or Discipline</label>
@@ -120,11 +120,11 @@ define('blogcategory', ' ');
 
 
 
-            <form action="" class="form-inline">
+            <form action="results.php" class="form-inline" method="post">
               <div class="form-group">
                 <div class="col-md-5">
                   <select class="form-control" name="classification" id="classification">
-                  <option selected="selected">Classification</option>
+                  <option selected="selected">Select Classification</option>
                   <option value="Full time Faculty">Full time Faculty</option>
                   <option value="Adjunct Faculty">Adjunct Faculty</option>
                   <option value="Administrator">Administrator</option>
