@@ -7,15 +7,7 @@
 <meta name="keywords" content="Las Positas College, Las Positas, LPC" />
 <?php
 
-// Database Constants
-defined('DB_SERVER') ? null : define("DB_SERVER", "localhost");
-defined('DB_USER')   ? null : define("DB_USER", "root");
-defined('DB_PASS')   ? null : define("DB_PASS", "Timd!23");
-defined('DB_NAME')   ? null : define("DB_NAME", "lpc");
-
-// Create Connection
-$conn = new mysqli(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
-
+include_once("php/conn.php");
 
 define('root', $_SERVER['DOCUMENT_ROOT'] . '/');
 define('blogcategory', ' ');
@@ -89,15 +81,16 @@ define('blogcategory', ' ');
             <p>For more information, click on the employee's name.</p>
 
             <?php
-              if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
+              if(!$conn) { // creation of the connection object failed
+                die("connection object not created: ".mysqli_error($conn));
+              }
+
+              if (mysqli_connect_errno()) { // creation of the connection object has some other error
+                die("Connect failed: ".mysqli_connect_errno()." : ". mysqli_connect_error());
               }
 
               $offset = 0;
               $page_result = 25;
-
-
-
 
                 if (!isset($_GET['pageno'])) {
                   $_GET['pageno'] = 1;
@@ -111,7 +104,7 @@ define('blogcategory', ' ');
 
 
               $select_results = "SELECT * FROM directorymain ORDER BY lastName, firstName LIMIT $offset, $page_result";
-              $result2 = $conn->query($select_results);
+              $result2 = mysqli_query($conn, $select_results);
               $total_rows = mysqli_query($conn, "SELECT * FROM directorymain");
               $rows_result = mysqli_num_rows($total_rows);
 
@@ -161,7 +154,7 @@ define('blogcategory', ' ');
               echo "</ul>";
               echo "</div>";
 
-              $conn->close();
+              mysqli_close($conn);
 
             ?>
 

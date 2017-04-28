@@ -7,15 +7,7 @@
 <meta name="keywords" content="Las Positas College, Las Positas, LPC" />
 <?php
 
-// Database Constants
-defined('DB_SERVER') ? null : define("DB_SERVER", "localhost");
-defined('DB_USER')   ? null : define("DB_USER", "root");
-defined('DB_PASS')   ? null : define("DB_PASS", "Timd!23");
-defined('DB_NAME')   ? null : define("DB_NAME", "lpc");
-
-// Create Connection
-$conn = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
-
+include_once("php/conn.php");
 
 define('root', $_SERVER['DOCUMENT_ROOT'] . '/');
 define('blogcategory', ' ');
@@ -97,8 +89,6 @@ define('blogcategory', ' ');
                 die("Connect failed: ".mysqli_connect_errno()." : ". mysqli_connect_error());
               }
 
-              // $first_var = $_POST['firstName'];
-              // $last_var = $_POST['lastName'];
               $first_var = isset($_POST['firstName']) ? $_POST['firstName'] : "";
               $last_var = isset($_POST['lastName']) ? $_POST['lastName'] : "";
               $title_var = isset($_POST['title']) ? $_POST['title'] : "";
